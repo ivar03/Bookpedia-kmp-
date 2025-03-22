@@ -1,7 +1,6 @@
 package com.plcoding.bookpedia.book.data.database
 
 import android.content.Context
-import androidx.core.view.accessibility.AccessibilityEventCompat.ContentChangeType
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
@@ -14,7 +13,7 @@ actual class DatabaseFactory(
 
         return Room.databaseBuilder(
             context = appContext,
-            name = dbFile.absoluteFile.toString()
+            name = dbFile.absolutePath
         )
     }
 }
